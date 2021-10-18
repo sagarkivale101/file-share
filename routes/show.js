@@ -9,7 +9,8 @@ try {
     if(!file){
          return res.render('download', {error: 'link expired'});        
     }
-
+    
+    console.log(process.env.APP_BASE_URL);
     return res.render('download', {
         uuid: file.uuid,
         fileName: file.filename,
