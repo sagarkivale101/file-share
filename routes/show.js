@@ -10,11 +10,13 @@ try {
          return res.render('download', {error: 'link expired'});        
     }
 
+    
     return res.render('download', {
         uuid: file.uuid,
         fileName: file.filename,
         fileSize: file.size,
-        downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}` 
+        downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}` ,
+       //git:  downloadLink: `${process.env.APP_BASE_URL}files/download/${file.uuid}`
         //http://localhost:3000/files.download/uuid........
     });
 
